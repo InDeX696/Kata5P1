@@ -17,7 +17,7 @@ public class Kata5P1 {
     public static void main(String[] args) throws ClassNotFoundException, SQLException, IOException {
         
         Class.forName("org.sqlite.JDBC");
-        Connection con = DriverManager.getConnection("jdbc:sqlite:D:/Usuario/Desktop/DAVID/Universidad/IS2/Practica Lab 5/SQLiteDatabaseBrowserPortable/Data/KATA5.db");
+        Connection con = DriverManager.getConnection("jdbc:sqlite:D:/Usuario/Desktop/InDeX/Uni/IS2/Kata5/SQLiteDatabaseBrowserPortable/Data/KATA5.db");
         String query = "select * from PEOPLE";
         Statement stmt = null;
         stmt = con.createStatement();
@@ -32,7 +32,7 @@ public class Kata5P1 {
         stmt.executeUpdate("drop table if exists emails");
         stmt.executeUpdate("create table emails (Id integer primary key autoincrement, Mail string not null)");
         
-        String fileName = "D:/Usuario/Desktop/DAVID/Universidad/IS2/Practica Lab 5/emails.txt";
+        String fileName = "D:/Usuario/Desktop/InDeX/Uni/IS2/Kata5/emails.txt";
         BufferedReader reader = new BufferedReader(new FileReader(new File(fileName)));
         String mail="";
         
